@@ -24,6 +24,10 @@ numbers.forEach(number => number.addEventListener("click", () => {
 }))
 
 // Functions
+function disableOperators(state) {
+  operatorPresent = state;
+  operatorBtns.forEach((operatorBtn) => operatorBtn.disabled = state);
+}
 function clearDisplay() {
   a.textContent = "";
   b.textContent = "";
