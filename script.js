@@ -32,6 +32,11 @@ deleteBtn.addEventListener("click", deleteCharacter);
 
 clearBtn.addEventListener("click", clearDisplay);
 
+calculateBtn.addEventListener("click", () => {
+  calculate()
+  disableOperators(false)
+})
+
 // Functions
 function disableOperators(state) {
   operatorPresent = state;
