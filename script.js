@@ -10,6 +10,19 @@ const clearBtn = document.querySelector("#clear");
 const deleteBtn = document.querySelector("#delete");
 const calculateBtn = document.querySelector("#equals");
 
+// Event Listeners
+numbers.forEach(number => number.addEventListener("click", () => {
+  if (!operatorPresent) {
+    if (number.value == "." && a.textContent.includes(".")) {
+      a.textContent += ""
+    } else { a.textContent += number.value }
+  } else {
+    if (number.value == "." && b.textContent.includes(".")) {
+      b.textContent += ""
+    } else { b.textContent += number.value }
+  }
+}))
+
 // Functions
 function clearDisplay() {
   a.textContent = "";
