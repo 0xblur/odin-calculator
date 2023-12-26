@@ -23,6 +23,10 @@ numbers.forEach(number => number.addEventListener("click", () => {
   }
 }))
 
+operatorBtns.forEach(operatorBtn => operatorBtn.addEventListener("click", () => {
+  operator.textContent += operatorBtn.value
+  disableOperators(true)
+}))
 // Functions
 function disableOperators(state) {
   operatorPresent = state;
