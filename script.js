@@ -27,6 +27,9 @@ operatorBtns.forEach(operatorBtn => operatorBtn.addEventListener("click", () => 
   operator.textContent += operatorBtn.value
   disableOperators(true)
 }))
+
+deleteBtn.addEventListener("click", deleteCharacter);
+
 // Functions
 function disableOperators(state) {
   operatorPresent = state;
