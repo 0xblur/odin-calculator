@@ -30,6 +30,8 @@ operatorBtns.forEach(operatorBtn => operatorBtn.addEventListener("click", () => 
 
 deleteBtn.addEventListener("click", deleteCharacter);
 
+clearBtn.addEventListener("click", clearDisplay);
+
 // Functions
 function disableOperators(state) {
   operatorPresent = state;
