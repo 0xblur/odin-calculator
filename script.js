@@ -11,6 +11,13 @@ const deleteBtn = document.querySelector("#delete");
 const calculateBtn = document.querySelector("#equals");
 
 // Functions
+function clearDisplay() {
+  a.textContent = "";
+  b.textContent = "";
+  operator.textContent = "";
+  disableOperators(false);
+}
+
 function add(a, b) {
   return Number(a) + Number(b)
 }
