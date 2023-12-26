@@ -28,6 +28,18 @@ function disableOperators(state) {
   operatorPresent = state;
   operatorBtns.forEach((operatorBtn) => operatorBtn.disabled = state);
 }
+
+function deleteCharacter() {
+  if (b.textContent) {
+    b.textContent = b.textContent.slice(0, -1);
+  } else if (operator.textContent) {
+    operator.textContent = operator.textContent.slice(0, -1)
+    disableOperators(false)
+  } else {
+    a.textContent = a.textContent.slice(0, -1)
+  }
+};
+
 function clearDisplay() {
   a.textContent = "";
   b.textContent = "";
