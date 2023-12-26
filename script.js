@@ -61,6 +61,27 @@ function clearDisplay() {
   disableOperators(false);
 }
 
+function calculate() {
+  const result = `${a.textContent}${operator.textContent}${b.textContent}`
+  if (result.includes("+")) {
+    const [num1, num2] = result.split("+")
+    clearDisplay()
+    a.textContent = add(num1, num2)
+  } else if (result.includes("-")) {
+    const [num1, num2] = result.split("-")
+    clearDisplay()
+    a.textContent = subtract(num1, num2)
+  } else if (result.includes("*")) {
+    const [num1, num2] = result.split("*")
+    clearDisplay()
+    a.textContent = multiply(num1, num2)
+  } else if (result.includes("/")) {
+    const [num1, num2] = result.split("/")
+    clearDisplay()
+    a.textContent = divide(num1, num2)
+  }
+}
+
 function add(a, b) {
   return Number(a) + Number(b)
 }
