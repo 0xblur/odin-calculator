@@ -96,4 +96,8 @@ function multiply(a, b) {
 
 function divide(a, b) {
   return Number(a) / Number(b)
+  if (b == 0) {
+    alert("You can't divide by 0")
+    return a
+  }
 }
