@@ -95,9 +95,13 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-  return Number(a) / Number(b)
   if (b == 0) {
     alert("You can't divide by 0")
     return a
   }
+  result = Number(a) / Number(b)
+  // if (Math.floor(result) !== result && result.toString().split("")[1].length > 2) {
+  //   return result.toFixed(2)
+
+  return result.toFixed(2)
 }
